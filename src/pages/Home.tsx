@@ -65,7 +65,7 @@ export function Home() {
 
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-[#FF3D00] text-xl font-bold mb-1">EVENTCONNECT</h1>
+        <h1 className="logo-font text-xl mb-1">EVENTCONNECT</h1>
         <h2 className="text-3xl font-bold mb-2">HEY!</h2>
         <p className="text-3xl font-bold flex items-center gap-2">
           Welcome Back <span className="text-2xl">👋</span>
@@ -79,24 +79,30 @@ export function Home() {
       </div>
 
          {/* Action Buttons */}
-         <div className="flex gap-4 mb-8">
+      <div className="flex gap-4 mb-8">
         <Link
           to="/tickets"
-          className="flex-1 bg-white/10 rounded-full py-3 font-medium text-center"
+          className="flex-1 bg-white/10 rounded-full py-3 font-medium text-center text-sm"
         >
           Festivals
         </Link>
         <button
           onClick={() => setShowUseModal(true)}
-          className="flex-1 bg-white/10 rounded-full py-3 font-medium"
+          className="flex-1 bg-white/10 rounded-full py-3 font-medium text-sm"
         >
-          Use Tokens
+          Use 
+        </button>
+        <button
+          onClick={() => setShowEarnModal(true)}
+          className="flex-1 bg-white/10 rounded-full py-3 font-medium text-sm"
+        >
+          Get 
         </button>
         <button
           onClick={() => navigate('/wallet')}
-          className="flex-1 bg-white/10 rounded-full py-3 font-medium"
+          className="flex-1 bg-white/10 rounded-full py-3 font-medium text-sm"
         >
-          Get Tokens
+          Wallet
         </button>
       </div>
 
