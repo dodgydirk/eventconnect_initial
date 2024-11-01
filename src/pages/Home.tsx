@@ -4,6 +4,7 @@ import { TopNav } from '../components/TopNav';
 import { TokenActionModal } from '../components/TokenActions';
 import { useTokenStore } from '../store/useTokenStore';
 import { Wallet, MapPin, Calendar, Ticket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const upcomingFestivals = [
   {
@@ -77,14 +78,14 @@ export function Home() {
         <span>Tokens: {balance.toFixed(2)} ECT</span>
       </div>
 
-      {/* Action Buttons */}
-      <div className="flex gap-4 mb-8">
-        <button
-          onClick={() => setShowEarnModal(true)}
-          className="flex-1 bg-white/10 rounded-full py-3 font-medium"
+         {/* Action Buttons */}
+         <div className="flex gap-4 mb-8">
+        <Link
+          to="/tickets"
+          className="flex-1 bg-white/10 rounded-full py-3 font-medium text-center"
         >
           Festivals
-        </button>
+        </Link>
         <button
           onClick={() => setShowUseModal(true)}
           className="flex-1 bg-white/10 rounded-full py-3 font-medium"
@@ -111,8 +112,8 @@ export function Home() {
             <span className="font-medium">{action.label}</span>
           </button>
         ))}
+        
       </div>
-
       {/* Upcoming Festivals */}
       <div>
         <h3 className="text-xl font-bold mb-4">Upcoming Festivals</h3>
